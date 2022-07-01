@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/notesFragment">
+
+    <fragment
+        android:id="@+id/notesFragment"
+        android:name="com.nitin.cleanarch.feature_one.presentation.notes.NotesFragment"
+        android:label="fragment_notes"
+        tools:layout="@layout/fragment_notes">
+
+
+        <action
+            android:id="@+id/action_notesFragment_to_addAndEditNoteFragment"
+            app:destination="@id/addAndEditNoteFragment">
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/addAndEditNoteFragment"
+        android:name="com.nitin.cleanarch.feature_one.presentation.add_edit_note.AddAndEditNoteFragment"
+        android:label="AddAndEditNoteFragment" >
+        <argument
+            android:name="note"
+            android:defaultValue="@null"
+            app:argType="com.nitin.cleanarch.feature_one.domain.model.Note"
+            app:nullable="true" />
+    </fragment>
+</navigation>
