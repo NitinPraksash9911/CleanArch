@@ -25,3 +25,7 @@ plugins {
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
+
+task generateBaseline(type: Exec) {
+    commandLine 'sh','macro-baseline-profile-generator.sh'
+}
