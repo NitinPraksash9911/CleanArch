@@ -1,5 +1,6 @@
 #!/bin/sh
-
+set -e
+set -o pipefail
 ## FOLLOW THIS STEPS FIRS TO SET EVN VARIABLE FOR THE FOLLOWING COMMANDS
 
 # Set android home path
