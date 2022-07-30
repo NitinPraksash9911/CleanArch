@@ -1777,6 +1777,7 @@ HSPLandroidx/lifecycle/ProcessLifecycleInitializer;->create(Landroid/content/Con
 HSPLandroidx/lifecycle/ProcessLifecycleInitializer;->create(Landroid/content/Context;)Ljava/lang/Object;
 HSPLandroidx/lifecycle/ProcessLifecycleInitializer;->dependencies()Ljava/util/List;
 HSPLandroidx/lifecycle/ProcessLifecycleOwner$1;-><init>(Landroidx/lifecycle/ProcessLifecycleOwner;)V
+HSPLandroidx/lifecycle/ProcessLifecycleOwner$1;->run()V
 HSPLandroidx/lifecycle/ProcessLifecycleOwner$2;-><init>(Landroidx/lifecycle/ProcessLifecycleOwner;)V
 HSPLandroidx/lifecycle/ProcessLifecycleOwner$3$1;-><init>(Landroidx/lifecycle/ProcessLifecycleOwner$3;)V
 HSPLandroidx/lifecycle/ProcessLifecycleOwner$3$1;->onActivityPostResumed(Landroid/app/Activity;)V
@@ -1793,6 +1794,7 @@ HSPLandroidx/lifecycle/ProcessLifecycleOwner;->activityResumed()V
 HSPLandroidx/lifecycle/ProcessLifecycleOwner;->activityStarted()V
 HSPLandroidx/lifecycle/ProcessLifecycleOwner;->activityStopped()V
 HSPLandroidx/lifecycle/ProcessLifecycleOwner;->attach(Landroid/content/Context;)V
+HSPLandroidx/lifecycle/ProcessLifecycleOwner;->dispatchPauseIfNeeded()V
 HSPLandroidx/lifecycle/ProcessLifecycleOwner;->dispatchStopIfNeeded()V
 HSPLandroidx/lifecycle/ProcessLifecycleOwner;->get()Landroidx/lifecycle/LifecycleOwner;
 HSPLandroidx/lifecycle/ProcessLifecycleOwner;->getLifecycle()Landroidx/lifecycle/Lifecycle;
@@ -2509,6 +2511,7 @@ HSPLandroidx/room/InvalidationTracker;->internalInit(Landroidx/sqlite/db/Support
 HSPLandroidx/room/InvalidationTracker;->removeObserver(Landroidx/room/InvalidationTracker$Observer;)V
 HSPLandroidx/room/InvalidationTracker;->resolveViews([Ljava/lang/String;)[Ljava/lang/String;
 HSPLandroidx/room/InvalidationTracker;->startTrackingTable(Landroidx/sqlite/db/SupportSQLiteDatabase;I)V
+HSPLandroidx/room/InvalidationTracker;->stopTrackingTable(Landroidx/sqlite/db/SupportSQLiteDatabase;I)V
 HSPLandroidx/room/InvalidationTracker;->syncTriggers()V
 HSPLandroidx/room/InvalidationTracker;->syncTriggers(Landroidx/sqlite/db/SupportSQLiteDatabase;)V
 HSPLandroidx/room/Room;->databaseBuilder(Landroid/content/Context;Ljava/lang/Class;Ljava/lang/String;)Landroidx/room/RoomDatabase$Builder;
@@ -2527,6 +2530,7 @@ HSPLandroidx/room/RoomDatabase;->assertNotSuspendingTransaction()V
 HSPLandroidx/room/RoomDatabase;->getBackingFieldMap()Ljava/util/Map;
 HSPLandroidx/room/RoomDatabase;->getCloseLock()Ljava/util/concurrent/locks/Lock;
 HSPLandroidx/room/RoomDatabase;->getInvalidationTracker()Landroidx/room/InvalidationTracker;
+HSPLandroidx/room/RoomDatabase;->getOpenHelper()Landroidx/sqlite/db/SupportSQLiteOpenHelper;
 HSPLandroidx/room/RoomDatabase;->getQueryExecutor()Ljava/util/concurrent/Executor;
 HSPLandroidx/room/RoomDatabase;->inTransaction()Z
 HSPLandroidx/room/RoomDatabase;->init(Landroidx/room/DatabaseConfiguration;)V
@@ -2608,6 +2612,7 @@ HSPLandroidx/sqlite/db/framework/FrameworkSQLiteDatabase;->endTransaction()V
 HSPLandroidx/sqlite/db/framework/FrameworkSQLiteDatabase;->execSQL(Ljava/lang/String;)V
 HSPLandroidx/sqlite/db/framework/FrameworkSQLiteDatabase;->inTransaction()Z
 HSPLandroidx/sqlite/db/framework/FrameworkSQLiteDatabase;->isDelegate(Landroid/database/sqlite/SQLiteDatabase;)Z
+HSPLandroidx/sqlite/db/framework/FrameworkSQLiteDatabase;->isOpen()Z
 HSPLandroidx/sqlite/db/framework/FrameworkSQLiteDatabase;->isWriteAheadLoggingEnabled()Z
 HSPLandroidx/sqlite/db/framework/FrameworkSQLiteDatabase;->query(Landroidx/sqlite/db/SupportSQLiteQuery;)Landroid/database/Cursor;
 HSPLandroidx/sqlite/db/framework/FrameworkSQLiteDatabase;->query(Ljava/lang/String;)Landroid/database/Cursor;

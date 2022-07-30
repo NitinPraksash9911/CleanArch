@@ -15,6 +15,10 @@ export PATH=$PATH:$ANDROID_HOME/cmdline-tools/latest/bin
 #3.  this will set temporary env path for for emulator command
 export PATH=$ANDROID_HOME/emulator:$ANDROID_HOME/tools:$PATH
 
+#close running emulators
+echo "Closing emulator"
+adb kill-server
+
 echo "Running macro-bench-mark script..."
 
 sdkmanager --install "system-images;android-30;google_apis;x86"
